@@ -31,7 +31,7 @@ jobs:
 
       - name: Run tests
         run: |
-          python -m unittest discover -s . -p "${{ matrix.test_file }}" -v > test_results_${{ matrix.test_file }}.txt 2>&1
+          python -m unittest discover -s . -p "${{ matrix.test_file }}" -v > ${{ matrix.test_file }}.txt 2>&1
 
       - name: Upload test results
         uses: actions/upload-artifact@v4
